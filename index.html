@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Corona</title>
+
+    <script type="text/javascript" src="js/baseClasses/SVG.js"></script>
+    <script type="text/javascript" src="js/CustomStats.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <h1>My Corona</h1>
+    <svg
+      id="canvas"
+      width="100%"
+      height="200"
+      style="touch-action: manipulation; left: 0; top: 0;"
+      onload="handleLoad()"
+    ></svg>
+
+    <!-- https://www.covid19data.com.au/ -->
+    <iframe
+      title="Metro Melbourne Roadmap Triggers: average daily cases"
+      aria-label="Interactive line chart"
+      id="datawrapper-chart-9S6mr"
+      src="https://datawrapper.dwcdn.net/9S6mr/26/"
+      scrolling="no"
+      frameborder="0"
+      style="border: none"
+      width="100%"
+      height="600"
+    ></iframe>
+  </body>
+</html>
