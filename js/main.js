@@ -9,7 +9,6 @@ function handleLoad() {
 
   fillData(3166);
   fillData(3249);
-  dataAlt();
 }
 
 function fillData(postcode) {
@@ -20,16 +19,6 @@ function fillData(postcode) {
     success: function(data) {
       const record = data.result.records[0];
       text.setStats(record.active, record.cases, record.new, record.data_date);
-    }
-  });
-}
-
-function dataAlt() {
-  const url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ9oKYNQhJ6v85dQ9qsybfMfc-eaJ9oKVDZKx-VGUr6szNoTbvsLTzpEaJ3oW_LZTklZbz70hDBUt-d/pub?gid=0&single=true&output=csv";
-  $.ajax({
-    url: url,
-    success: function(data) {
-      console.log(data);
     }
   });
 }

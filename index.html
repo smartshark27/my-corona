@@ -6,18 +6,14 @@
     <script type="text/javascript" src="js/baseClasses/SVG.js"></script>
     <script type="text/javascript" src="js/CustomStats.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"
+    ></script>
   </head>
 
   <body>
     <h1>My Corona</h1>
-    <svg
-      id="canvas"
-      width="100%"
-      height="200"
-      style="touch-action: manipulation; left: 0; top: 0;"
-      onload="handleLoad()"
-    ></svg>
 
     <!-- https://www.covid19data.com.au/ -->
     <iframe
@@ -31,5 +27,35 @@
       width="100%"
       height="600"
     ></iframe>
+
+    <div
+      class="infogram-embed"
+      data-id="_/HDosvjNtauQZC3iEzrCi"
+      data-type="interactive"
+      data-title="Victoria: Daily COVID-19 cases by Local Government Area (LGA)"
+    ></div>
+    <script>
+      !(function (e, i, n, s) {
+        var t = "InfogramEmbeds",
+          d = e.getElementsByTagName("script")[0];
+        if (window[t] && window[t].initialized)
+          window[t].process && window[t].process();
+        else if (!e.getElementById(n)) {
+          var o = e.createElement("script");
+          (o.async = 1),
+            (o.id = n),
+            (o.src = "https://e.infogram.com/js/dist/embed-loader-min.js"),
+            d.parentNode.insertBefore(o, d);
+        }
+      })(document, 0, "infogram-async");
+    </script>
+
+    <svg
+      id="canvas"
+      width="100%"
+      height="200"
+      style="touch-action: manipulation; left: 0; top: 0"
+      onload="handleLoad()"
+    ></svg>
   </body>
 </html>
